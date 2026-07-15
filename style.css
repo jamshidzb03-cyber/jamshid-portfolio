@@ -1,0 +1,886 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+nav{
+    width: 100%;
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    background: rgba(26, 26, 26, 0.9);
+
+    backdrop-filter: blur(10px);
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    z-index: 1000;
+
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+}
+
+
+nav h2{
+    color: red;
+}
+
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+
+nav ul li a{
+    position: relative;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    transition: 0.3s;
+}
+
+
+nav ul li a:hover{
+    color: red;
+}
+
+
+.home{
+    min-height: 100vh;
+
+    padding-top: 70px;
+    
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 10%;
+}
+
+
+.home-text h1{
+    font-size: 55px;
+}
+
+
+.home-text h1 span{
+    color: red;
+}
+
+
+.home-text p{
+    font-size: 22px;
+    margin-top: 20px;
+    color: #ccc;
+}
+
+
+button{
+    margin-top: 30px;
+
+    padding: 15px 35px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: red;
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
+}
+
+
+button:hover{
+    background: darkred;
+}
+
+
+.about{
+    min-height: 400px;
+
+    text-align: center;
+
+    padding: 100px 20px;
+
+    background: #1a1a1a;
+}
+
+
+.about h2{
+    color: red;
+    font-size: 35px;
+
+    margin-bottom: 25px;
+}
+
+
+.about p{
+    font-size: 20px;
+    color: #ccc;
+}
+
+
+.skills{
+    min-height: 500px;
+
+    padding: 100px 8%;
+
+    text-align: center;
+}
+
+
+.skills h2{
+    font-size: 35px;
+    color: red;
+}
+
+
+.cards{
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    margin-top: 50px;
+}
+
+
+.card{
+    width: 250px;
+
+    padding: 30px;
+
+    background: #1a1a1a;
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+
+.card:hover{
+    transform: translateY(-10px);
+
+    background: #222;
+}
+
+
+.card h3{
+    color: red;
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+
+.card p{
+    color: #ccc;
+}
+
+.profile{
+    width: 250px;
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid red;
+
+    margin-right: 70px;
+
+    animation: float 3s ease-in-out infinite;
+}
+
+
+@keyframes float{
+
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-20px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+
+}
+
+.contact{
+    min-height: 400px;
+
+    padding: 100px 20px;
+
+    text-align: center;
+
+    background: #1a1a1a;
+}
+
+
+.contact h2{
+    color: red;
+
+    font-size: 35px;
+
+    margin-bottom: 20px;
+}
+
+
+.contact p{
+    color: #ccc;
+
+    font-size: 20px;
+
+    margin-bottom: 30px;
+}
+
+
+.telegram{
+    display: inline-block;
+
+    padding: 15px 40px;
+
+    background: red;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+
+.telegram:hover{
+    background: darkred;
+
+    transform: scale(1.1);
+}
+
+
+/* TELEFON UCHUN */
+
+@media (max-width: 768px){
+
+    nav{
+        height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+
+    nav ul{
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    nav ul li a{
+        font-size: 14px;
+    }
+
+
+    .home{
+        min-height: 800px;
+
+        padding: 50px 20px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+    }
+
+
+    .profile{
+        width: 200px;
+
+        height: 200px;
+
+        margin-right: 0;
+
+        margin-bottom: 40px;
+    }
+
+
+    .home-text h1{
+        font-size: 35px;
+    }
+
+
+    .home-text p{
+        font-size: 18px;
+    }
+
+
+    .cards{
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .card{
+        width: 100%;
+
+        max-width: 300px;
+    }
+
+}
+
+
+/* LOGIN */
+
+.login{
+    min-height: 600px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #111;
+}
+
+
+.login-box{
+    width: 350px;
+
+    padding: 40px;
+
+    background: #1a1a1a;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+}
+
+
+.login-box h2{
+    color: red;
+
+    font-size: 35px;
+
+    margin-bottom: 30px;
+}
+
+
+.login-box input{
+    width: 100%;
+
+    padding: 15px;
+
+    margin: 10px 0;
+
+    border: none;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 16px;
+}
+
+
+.login-box button{
+    width: 100%;
+
+    margin-top: 20px;
+}
+
+
+#message{
+    margin-top: 20px;
+
+    color: red;
+
+    font-size: 17px;
+}
+/* DARK / LIGHT MODE */
+
+.mode-btn{
+    margin: 0;
+
+    width: 50px;
+
+    height: 40px;
+
+    padding: 0;
+
+    border-radius: 20px;
+
+    font-size: 20px;
+
+    background: red;
+}
+
+
+.light-mode{
+    background: #f5f5f5;
+
+    color: #111;
+}
+
+
+.light-mode nav{
+    background: white;
+}
+
+
+.light-mode .about,
+.light-mode .card,
+.light-mode .login-box{
+    background: white;
+}
+
+
+.light-mode .home-text p,
+.light-mode .about p,
+.light-mode .card p,
+.light-mode .contact p{
+    color: #333;
+}
+
+/* REGISTER */
+
+.register{
+    min-height: 600px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #1a1a1a;
+}
+
+
+.register-box{
+    width: 350px;
+
+    padding: 40px;
+
+    background: #111;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+}
+
+
+.register-box h2{
+    color: red;
+
+    font-size: 35px;
+
+    margin-bottom: 30px;
+}
+
+
+.register-box input{
+    width: 100%;
+
+    padding: 15px;
+
+    margin: 10px 0;
+
+    border: none;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 16px;
+}
+
+
+.register-box button{
+    width: 100%;
+
+    margin-top: 20px;
+}
+
+
+#registerMessage{
+    margin-top: 20px;
+
+    font-size: 17px;
+}
+
+/* DASHBOARD */
+
+.dashboard{
+    min-height: 600px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #111;
+}
+
+
+.dashboard-box{
+    width: 350px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    background: #1a1a1a;
+
+    border-radius: 15px;
+
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+}
+
+
+.dashboard-box h2{
+    color: red;
+
+    font-size: 32px;
+
+    margin-bottom: 25px;
+}
+
+
+.dashboard-box h3{
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+
+.dashboard-box p{
+    color: #ccc;
+
+    font-size: 18px;
+}
+
+nav ul li a::after{
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -7px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: red;
+
+    transition: 0.3s;
+
+}
+
+
+nav ul li a:hover::after{
+
+    width: 100%;
+
+}
+
+
+nav ul li a:hover{
+
+    color: red;
+
+}
+
+/* LOADING SCREEN */
+
+#loader{
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100vh;
+
+    background: #111;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 9999;
+
+    animation: hideLoader 3s forwards;
+
+}
+
+
+#loader h1{
+
+    color: red;
+
+    font-size: 45px;
+
+    letter-spacing: 5px;
+
+    animation: loaderText 1.5s infinite;
+
+}
+
+
+.loading-line{
+
+    width: 200px;
+
+    height: 4px;
+
+    background: red;
+
+    margin-top: 25px;
+
+    animation: loading 2s infinite;
+
+}
+
+
+@keyframes loading{
+
+    0%{
+
+        width: 0;
+
+    }
+
+    100%{
+
+        width: 200px;
+
+    }
+
+}
+
+
+@keyframes loaderText{
+
+    0%{
+
+        opacity: 0.3;
+
+    }
+
+    50%{
+
+        opacity: 1;
+
+    }
+
+    100%{
+
+        opacity: 0.3;
+
+    }
+
+}
+
+
+@keyframes hideLoader{
+
+    0%{
+
+        opacity: 1;
+
+        visibility: visible;
+
+    }
+
+    80%{
+
+        opacity: 1;
+
+        visibility: visible;
+
+    }
+
+    100%{
+
+        opacity: 0;
+
+        visibility: hidden;
+
+    }
+
+}
+
+/* SCROLL ANIMATION */
+
+.about,
+.skills,
+.contact,
+.login,
+.register,
+.dashboard{
+
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    animation: showSection 1s forwards;
+
+}
+
+
+@keyframes showSection{
+
+    0%{
+
+        opacity: 0;
+
+        transform: translateY(50px);
+
+    }
+
+    100%{
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* SCROLL ANIMATION */
+
+.hidden{
+    opacity: 0;
+
+    transform: translateY(80px);
+
+    transition: 1s;
+}
+
+
+.show{
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+/* CONTACT FORM */
+
+.contact-form{
+
+    width: 400px;
+
+    max-width: 100%;
+
+    margin: 30px auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+}
+
+
+.contact-form input,
+.contact-form textarea{
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 16px;
+
+}
+
+
+.contact-form textarea{
+
+    height: 150px;
+
+    resize: none;
+
+}
+
+
+.contact-form button{
+
+    width: 100%;
+
+}
+
+
+#contactResult{
+
+    margin-top: 10px;
+
+    font-size: 17px;
+
+}

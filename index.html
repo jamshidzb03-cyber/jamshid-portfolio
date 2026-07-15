@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jamshid Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOADING SCREEN -->
+
+<div id="loader">
+
+    <h1>JAMSHID</h1>
+
+    <div class="loading-line"></div>
+
+</div>
+
+
+
+    
+    <!-- MENU -->
+    <nav>
+        <h2>JAMSHID</h2>
+
+        <button class="mode-btn" onclick="changeMode()">🌙</button>
+
+        <ul>
+            <li><a href="#home">Bosh sahifa</a></li>
+            <li><a href="#about">Men haqimda</a></li>
+            <li><a href="#skills">Qobiliyatlar</a></li>
+            <li><a href="#contact">Bog'lanish</a></li>
+            <li><a href="#login">Login</a></li>
+            <li><a href="#register">Register</a></li>
+            <li><a href="#dashboard">Profil</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- BOSH SAHIFA -->
+    <section id="home" class="home">
+        <img src="men.jpg" alt="Jamshid rasmi" class="profile">
+        <div class="home-text">
+            <h1>Salom, men <span>Jamshid</span></h1>
+
+            <p>
+                Men Front-end dasturchi bo'lishni o'rganayapman.
+            </p>
+
+            <button onclick="salom()">Men haqimda</button>
+        </div>
+
+    </section>
+
+
+    <!-- MEN HAQIMDA -->
+    <section id="about" class="about hidden">
+
+        <h2>Men haqimda</h2>
+
+        <p>
+            Men sayt yaratishni o'rganayapman.
+            HTML, CSS va JavaScript bilan ishlayman.
+        </p>
+
+    </section>
+
+
+    <!-- QOBILIYATLAR -->
+    <section id="skills" class="skills hidden">
+
+        <h2>Qobiliyatlarim</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>HTML</h3>
+                <p>Sayt tuzilishini yarataman.</p>
+            </div>
+
+            <div class="card">
+                <h3>CSS</h3>
+                <p>Sayt dizaynini yarataman.</p>
+            </div>
+
+            <div class="card">
+                <h3>JavaScript</h3>
+                <p>Saytga harakat va funksiyalar qo'shaman.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+<!-- CONTACT -->
+
+    <section id="contact" class="contact hidden">
+
+    <h2>Men bilan bog'lanish</h2>
+
+    <p>Menga xabar yuboring 📩</p>
+
+    <div class="contact-form">
+
+        <input 
+            type="text" 
+            id="contactName" 
+            placeholder="Ismingiz"
+        >
+
+        <input 
+            type="email" 
+            id="contactEmail" 
+            placeholder="Emailingiz"
+        >
+
+        <textarea 
+            id="contactMessage" 
+            placeholder="Xabaringiz"
+        ></textarea>
+
+        <button onclick="sendMessage()">
+            Yuborish
+        </button>
+
+        <p id="contactResult"></p>
+
+    </div>
+
+</section>
+
+
+<!-- LOGIN -->
+<section id="login" class="login hidden">
+
+    <div class="login-box">
+
+        <h2>Login</h2>
+
+        <input type="text" id="username" placeholder="Username">
+
+        <input type="password" id="password" placeholder="Password">
+
+        <button onclick="login()">Kirish</button>
+
+        <p id="message"></p>
+
+    </div>
+
+</section>
+
+<!-- REGISTER -->
+
+<section id="register" class="register hidden">
+
+    <div class="register-box">
+
+        <h2>Register</h2>
+
+        <input 
+            type="text" 
+            id="regUsername" 
+            placeholder="Username"
+        >
+
+        <input 
+            type="password" 
+            id="regPassword" 
+            placeholder="Password"
+        >
+
+        <button onclick="register()">
+            Ro'yxatdan o'tish
+        </button>
+
+        <p id="registerMessage"></p>
+
+    </div>
+
+</section>
+
+<!-- DASHBOARD -->
+
+<section id="dashboard" class="dashboard hidden">
+
+    <div class="dashboard-box">
+
+        <h2>Profilim 👤</h2>
+
+        <h3 id="userName">Foydalanuvchi</h3>
+
+        <p>Saytimizga xush kelibsiz 🔥</p>
+
+        <button onclick="logout()">Chiqish</button>
+
+    </div>
+
+</section>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
