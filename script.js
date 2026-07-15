@@ -1,3 +1,7 @@
+emailjs.init({
+    publicKey: "DamQBluRrshC708g5"
+});
+
 function salom(){
 
     document.getElementById("about").scrollIntoView({
@@ -145,37 +149,135 @@ window.addEventListener("scroll", function(){
 
 });
 
-function sendMessage(){
-
+function sendMessage() {
     let name = document.getElementById("contactName").value;
-
     let email = document.getElementById("contactEmail").value;
-
     let message = document.getElementById("contactMessage").value;
 
     let result = document.getElementById("contactResult");
 
+    if (name === "" || email === "" || message === "") {
+        result.innerHTML = "Iltimos, hamma joyni to'ldiring!";
+        result.style.color = "red";
+        return;
+    }
 
-    if(name === "" || email === "" ||  message === ""){
+    emailjs.send("service_ne7g87a", "template_0gy822t", {
+        name: name,
+        email: email,
+        message: message
+    })
+    .then(function () {
+        result.innerHTML = "Xabaringiz yuborildi! 🔥";
+        result.style.color = "green";
 
-        result.innerHTML = "Iltimos, hamma joyni to'ldiring! ❌";
-
+        document.getElementById("contactName").value = "";
+        document.getElementById("contactEmail").value = "";
+        document.getElementById("contactMessage").value = "";
+    })
+    .catch(function (error) {
+        result.innerHTML = "Xatolik yuz berdi ❌";
         result.style.color = "red";
 
-        return;
+        console.log(error);
+    });
+}
+
+    
+function showProject(projectName){
+
+    alert(projectName + " loyihasi tez orada qo'shiladi 🔥");
+
+}
+function toggleMenu(){
+
+    let menu = document.querySelector("nav ul");
+
+    menu.classList.toggle("active");
+
+}
+function goTop(){
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+}
+window.addEventListener("scroll", function(){
+
+    let topBtn = document.getElementById("topBtn");
+
+
+    if(window.scrollY > 300){
+
+        topBtn.classList.add("show-top");
 
     }
 
+    else{
 
-    result.innerHTML = "Xabaringiz yuborildi! 🔥";
+        topBtn.classList.remove("show-top");
 
-    result.style.color = "green";
+    }
+
+});
+let text = "Men Front-end dasturchiman";
+
+let index = 0;
+
+let typingText = document.getElementById("typingText");
 
 
-    document.getElementById("contactName").value = "";
+function typing(){
 
-    document.getElementById("contactEmail").value = "";
+    if(index < text.length){
 
-    document.getElementById("contactMessage").value = "";
+        typingText.innerHTML += text.charAt(index);
+
+        index++;
+
+        setTimeout(typing, 100);
+
+    }
 
 }
+
+
+typing();
+
+function hireMe(){
+
+    document.getElementById("contact").scrollIntoView({
+
+        behavior: "smooth"
+
+    });
+
+}
+let ism = "Jamshid";
+
+let yosh = 18;
+
+let kasb = "Front-end Developer";
+
+console.log(ism);
+
+console.log(yosh);
+
+console.log(kasb);
+
+window.addEventListener("load", function(){
+
+    let loader = document.getElementById("loader");
+
+    setTimeout(function(){
+
+        loader.classList.add("hide-loader");
+
+    }, 1000);
+
+});
